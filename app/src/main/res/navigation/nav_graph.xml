@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.signup.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.help.HelpFragment"
+        android:label="HelpFragment" />
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.transfer.TransferFragment"
+        android:label="fragment_transfer"
+        tools:layout="@layout/fragment_transfer" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.services.ServicesFragment"
+        android:label="ServicesFragment" />
+    <fragment
+        android:id="@+id/investmentsFragment"
+        android:name="com.example.dependencyinversionprinciple.presentation.view.investments.InvestmentsFragment"
+        android:label="fragment_investments"
+        tools:layout="@layout/fragment_investments" />
+</navigation>
